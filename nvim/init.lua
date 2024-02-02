@@ -86,7 +86,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		local cwd = vim.fn.getcwd()
 		local directory_name = cwd:match("([^/]+)$")
 
-		vim.api.nvim_set_option("titlestring", directory_name)
+		vim.api.nvim_set_option("titlestring", "vim » " .. directory_name)
 		vim.api.nvim_set_option("title", true)
 
 		if #vim.fn.argv() == 0 then
