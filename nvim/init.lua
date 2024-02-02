@@ -11,6 +11,8 @@ vim.o.wrap = false
 
 vim.opt.signcolumn = "yes"
 
+vim.opt.conceallevel = 1
+
 vim.wo.number = true
 
 vim.api.nvim_create_autocmd("FileType", {
