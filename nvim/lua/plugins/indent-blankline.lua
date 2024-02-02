@@ -10,7 +10,7 @@ return {
 		local hooks = require("ibl.hooks")
 
 		hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-			vim.api.nvim_set_hl(0, "Surface", { fg = "#3a3a3a" })
+			vim.api.nvim_set_hl(0, "Surface", { fg = "#414141" })
 		end)
 
 		require("ibl").setup({
