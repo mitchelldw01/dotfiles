@@ -81,6 +81,12 @@ require("mappings")
 vim.api.nvim_create_autocmd("VimEnter", {
 	pattern = "*",
 	callback = function()
+		local cwd = vim.fn.getcwd()
+		local directory_name = cwd:match("([^/]+)$")
+
+		vim.api.nvim_set_option("titlestring", directory_name)
+		vim.api.nvim_set_option("title", true)
+
 		if #vim.fn.argv() == 0 then
 			require("telescope.builtin").find_files()
 		end
