@@ -79,6 +79,7 @@ local function toggle_telescope(harpoon_files)
 			}),
 			previewer = conf.file_previewer({}),
 			sorter = conf.generic_sorter({}),
+			initial_mode = "normal",
 		})
 		:find()
 end
