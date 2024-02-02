@@ -2,7 +2,7 @@ return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
 		local github = require("lualine.themes.github_dark_high_contrast")
-		github.normal.c.bg = "#303030"
+		github.normal.c.bg = "#373737"
 		github.normal.c.fg = "#71B7FF"
 
 		require("lualine").setup({
