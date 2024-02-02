@@ -92,5 +92,5 @@ vim.api.nvim_set_keymap("n", "<leader>jk", "<C-w>k", { noremap = true, silent = 
 vim.api.nvim_set_keymap("n", "<leader>jj", "<C-w>j", { noremap = true, silent = true })
 
 -- file navigation
-vim.keymap.set({ "n", "v" }, "n", "}", {})
-vim.keymap.set({ "n", "v" }, "m", "{", {})
+vim.keymap.set({ "n", "v" }, "n", "<C-d>zz", {})
+vim.keymap.set({ "n", "v" }, "m", "<C-u>zz", {})
