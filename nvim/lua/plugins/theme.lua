@@ -1,14 +1,13 @@
 return {
-	"projekt0n/github-nvim-theme",
+	"catppuccin/nvim",
+	name = "catppuccin",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("github-theme").setup({
-			options = {
-				transparent = true,
-			},
+		require("catppuccin").setup({
+			no_italic = true,
 		})
 
-		vim.cmd("colorscheme github_dark_high_contrast")
+		vim.cmd("colorscheme catppuccin")
 	end,
 }
