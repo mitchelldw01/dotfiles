@@ -61,28 +61,28 @@ vim.api.nvim_set_keymap(
 vim.keymap.set("n", "<leader>dd", ":Trouble document_diagnostics<CR>", {})
 vim.keymap.set("n", "<leader>dw", ":Trouble workspace_diagnostics<CR>", {})
 
--- buffer-index
-local buffer_index = require("buffer-index")
+-- harpoon
+local harpoon = require("harpoon")
+
+vim.keymap.set("n", "<leader>ao", function()
+	harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
+
+vim.keymap.set("n", "<leader>aa", function()
+	harpoon:list():append()
+end)
 
 vim.keymap.set("n", "<leader>1", function()
-	print("jumping to buffer index 1")
-	buffer_index.jump_to_buffer_index(1)
+	harpoon:list():select(1)
 end)
-
 vim.keymap.set("n", "<leader>2", function()
-	buffer_index.jump_to_buffer_index(2)
+	harpoon:list():select(2)
 end)
-
 vim.keymap.set("n", "<leader>3", function()
-	buffer_index.jump_to_buffer_index(3)
+	harpoon:list():select(3)
 end)
-
 vim.keymap.set("n", "<leader>4", function()
-	buffer_index.jump_to_buffer_index(4)
-end)
-
-vim.keymap.set("n", "<leader>5", function()
-	buffer_index.jump_to_buffer_index(5)
+	harpoon:list():select(4)
 end)
 
 -- window navigation
