@@ -5,9 +5,9 @@ zstyle ':vcs_info:*' formats '(%b)'
 zstyle ':vcs_info:*' enable git
 
 # Define colors
-color_host='%F{#cba6f7}'
-color_dir='%F{#89b4fa}'
-color_branch='%F{#eba0ac}'
+color_host='%F{#5F7E97}'
+color_dir='%F{#82AAFF}'
+color_branch='%F{#C5E478}'
 
 # Configure the prompt
 PROMPT="${color_host}%m%f :: "

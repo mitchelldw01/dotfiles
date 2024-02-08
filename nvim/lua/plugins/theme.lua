@@ -1,13 +1,11 @@
 return {
-	"catppuccin/nvim",
-	name = "catppuccin",
+	"oxfist/night-owl.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("catppuccin").setup({
-			no_italic = true,
+		require("night-owl").setup({
+			bold = false,
+			italics = false,
 		})
-
-		vim.cmd("colorscheme catppuccin")
 	end,
 }
