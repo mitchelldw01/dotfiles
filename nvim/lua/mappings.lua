@@ -1,9 +1,6 @@
 -- general
 vim.api.nvim_create_user_command("T", "terminal <args>", { nargs = "*" })
 
--- copilot
-vim.api.nvim_create_user_command("C", "CopilotChat <args>", { nargs = "*" })
-
 -- markdown-preview
 vim.api.nvim_create_user_command("M", "MarkdownPreviewToggle", {})
 
@@ -32,6 +29,10 @@ vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, {})
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, {})
 vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, {})
+
+-- copilot
+vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>", {})
+vim.keymap.set("x", "<leader>cp", ":CopilotChatInPlace<CR>", {})
 
 -- tabbing
 vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
