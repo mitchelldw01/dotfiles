@@ -1,5 +1,9 @@
--- general
+-- terminal
 vim.api.nvim_create_user_command("T", "terminal <args>", { nargs = "*" })
+
+-- tabbing
+vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", ">", ">gv", { noremap = true, silent = true })
 
 -- markdown-preview
 vim.api.nvim_create_user_command("M", "MarkdownPreviewToggle", {})
@@ -8,10 +12,6 @@ vim.api.nvim_create_user_command("M", "MarkdownPreviewToggle", {})
 vim.keymap.set("n", "<leader>w", ":bd<CR>", {})
 vim.keymap.set("n", "<Tab>", ":bn<CR>", {})
 vim.keymap.set("n", "<S-Tab>", ":bp<CR>", {})
-
--- neogit
-vim.keymap.set("n", "<leader>ga", ":Neogit kind=auto<CR>", {})
-vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", {})
 
 -- telescope
 local builtin = require("telescope.builtin")
@@ -30,13 +30,13 @@ vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, {})
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, {})
 vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, {})
 
+-- gitsigns
+vim.keymap.set("n", "<leader>gg", ":Git<CR>", {})
+vim.keymap.set("n", "<leader>gp", ":Git push<CR>", {})
+
 -- copilot
 vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>", {})
 vim.keymap.set("x", "<leader>cp", ":CopilotChatInPlace<CR>", {})
-
--- tabbing
-vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", ">", ">gv", { noremap = true, silent = true })
 
 -- diagnostics
 vim.api.nvim_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
