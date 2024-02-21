@@ -30,7 +30,7 @@ vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, {})
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, {})
 vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, {})
 
--- gitsigns
+-- fugitive
 vim.keymap.set("n", "<leader>gg", ":Git<CR>", {})
 vim.keymap.set("n", "<leader>gp", ":Git push<CR>", {})
 
