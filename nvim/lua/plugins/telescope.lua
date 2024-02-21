@@ -11,11 +11,13 @@ return {
 				pickers = {
 					find_files = {
 						find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+						previewer = false,
 					},
 					buffers = {
 						sort_mru = true,
 						ignore_current_buffer = true,
 						initial_mode = "normal",
+						previewer = false,
 					},
 				},
 			})
