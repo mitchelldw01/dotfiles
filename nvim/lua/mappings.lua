@@ -3,7 +3,7 @@ vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", ">", ">gv", { noremap = true, silent = true })
 
 -- markdown-preview
-vim.api.nvim_create_user_command("M", "MarkdownPreviewToggle", {})
+vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<CR>", {})
 
 -- buffers
 vim.keymap.set("n", "<leader>w", ":bd<CR>", {})
