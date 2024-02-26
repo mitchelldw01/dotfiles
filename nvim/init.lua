@@ -52,6 +52,16 @@ vim.api.nvim_create_autocmd("CmdlineLeave", {
 	end,
 })
 
+function ToggleColorColumn()
+	if vim.wo.colorcolumn == "120" then
+		vim.wo.colorcolumn = ""
+	else
+		vim.wo.colorcolumn = "120"
+	end
+end
+
+vim.api.nvim_set_keymap("n", "<leader>sv", ":lua ToggleColorColumn()<CR>", { noremap = true, silent = true })
+
 vim.keymap.set("n", "<Esc>", function()
 	if search_performed then
 		vim.cmd("nohlsearch")
@@ -93,3 +103,5 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		end
 	end,
 })
+
+vim.cmd([[highlight ColorColumn ctermbg=none guibg=#C5E479]])
