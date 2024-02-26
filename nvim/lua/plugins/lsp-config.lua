@@ -45,6 +45,11 @@ return {
 			lspconfig.bashls.setup({
 				capabilites = capabilities,
 			})
+
+			lspconfig.zls.setup({
+				cmd = { "zls" },
+				capabilites = capabilities,
+			})
 		end,
 	},
 }
