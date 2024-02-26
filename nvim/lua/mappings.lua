@@ -1,6 +1,3 @@
--- terminal
-vim.api.nvim_create_user_command("T", "terminal <args>", { nargs = "*" })
-
 -- tabbing
 vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", ">", ">gv", { noremap = true, silent = true })
@@ -35,7 +32,7 @@ vim.keymap.set("n", "<leader>gg", ":Git<CR>", {})
 vim.keymap.set("n", "<leader>gp", ":Git push<CR>", {})
 
 -- copilot
-vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>", {})
+vim.api.nvim_create_user_command("C", "CopilotChat <args>", { nargs = "*" })
 vim.keymap.set("x", "<leader>cp", ":CopilotChatInPlace<CR>", {})
 
 -- diagnostics
