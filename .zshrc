@@ -21,8 +21,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # go
 export GOPATH=$HOME/go
@@ -31,10 +31,13 @@ export PATH=$PATH:$GOPATH/bin
 # kitty
 export PATH=$PATH:/Applications/kitty.app/Contents/MacOS
 
+# cargo
+. "$HOME/.cargo/env"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # aliases
 alias fucking=sudo
 alias vim=nvim
 
-. "$HOME/.cargo/env"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
