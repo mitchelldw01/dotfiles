@@ -28,9 +28,6 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# kitty
-export PATH=$PATH:/Applications/kitty.app/Contents/MacOS
-
 # cargo
 . "$HOME/.cargo/env"
 
@@ -38,6 +35,6 @@ export PATH=$PATH:/Applications/kitty.app/Contents/MacOS
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # aliases
-alias fucking=sudo
 alias vim=nvim
+alias fucking=sudo
 
