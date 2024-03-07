@@ -7,8 +7,6 @@ vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<CR>", {})
 
 -- buffers
 vim.keymap.set("n", "<leader>w", ":bd<CR>", {})
-vim.keymap.set("n", "<Tab>", ":bn<CR>", {})
-vim.keymap.set("n", "<S-Tab>", ":bp<CR>", {})
 
 -- telescope
 local builtin = require("telescope.builtin")
@@ -80,6 +78,9 @@ vim.keymap.set("n", "<leader>3", function()
 	harpoon:list():select(3)
 end)
 vim.keymap.set("n", "<leader>4", function()
+	harpoon:list():select(4)
+end)
+vim.keymap.set("n", "<leader>5", function()
 	harpoon:list():select(4)
 end)
 
