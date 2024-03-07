@@ -10,7 +10,7 @@ vim.o.scrolloff = 10
 vim.o.wrap = false
 
 vim.opt.signcolumn = "yes"
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 0
 
 vim.wo.number = true
 
@@ -39,19 +39,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-local search_performed = false
-
-vim.api.nvim_create_augroup("SearchHighlight", { clear = true })
-vim.api.nvim_create_autocmd("CmdlineLeave", {
-	group = "SearchHighlight",
-	pattern = { "/", "?" },
-	callback = function()
-		if vim.v.event.cmdtype == "/" or vim.v.event.cmdtype == "?" then
-			search_performed = true
-		end
-	end,
-})
-
 function ToggleColorColumn()
 	if vim.wo.colorcolumn == "120" then
 		vim.wo.colorcolumn = ""
@@ -61,14 +48,6 @@ function ToggleColorColumn()
 end
 
 vim.api.nvim_set_keymap("n", "<leader>sv", ":lua ToggleColorColumn()<CR>", { noremap = true, silent = true })
-
-vim.keymap.set("n", "<Esc>", function()
-	if search_performed then
-		vim.cmd("nohlsearch")
-		search_performed = false
-	end
-	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
-end, { noremap = true, silent = true })
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -104,4 +83,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
-vim.cmd([[highlight ColorColumn ctermbg=none guibg=#C5E479]])
+vim.cmd([[highlight ColorColumn ctermbg=none guibg=#BDE567]])
