@@ -37,4 +37,8 @@ export PATH=$PATH:$GOPATH/bin
 # aliases
 alias vim=nvim
 alias fucking=sudo
-
+alias zb="zig build"
+alias zbr="zig build run"
+alias zbt="zig build test --summary all"
+alias python=python3
+alias pip=pip3
