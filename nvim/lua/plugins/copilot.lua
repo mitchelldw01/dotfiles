@@ -4,12 +4,17 @@ return {
 	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
-		opts = {
-			disable_extra_info = "yes",
+		branch = "canary",
+		dependencies = {
+			{ "zbirenbaum/copilot.lua" },
+			{ "nvim-lua/plenary.nvim" },
 		},
-		build = function()
-			vim.notify("Please update the remote plugins by running ':UpdateRemotePlugins', then restart Neovim.")
+		config = function()
+			require("CopilotChat").setup({
+				opts = {
+					debug = true,
+				},
+			})
 		end,
-		event = "VeryLazy",
 	},
 }
