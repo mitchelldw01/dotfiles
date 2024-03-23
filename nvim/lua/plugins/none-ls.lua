@@ -29,27 +29,6 @@ return {
 				null_ls.builtins.diagnostics.golangci_lint,
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.formatting.goimports,
-				null_ls.builtins.diagnostics.eslint_d.with({
-					condition = function()
-						return has_config_file(".eslintrc.js")
-							or has_config_file(".eslintrc.cjs")
-							or has_config_file(".eslintrc.json")
-					end,
-				}),
-				null_ls.builtins.formatting.eslint_d.with({
-					condition = function()
-						return has_config_file(".eslintrc.js")
-							or has_config_file(".eslintrc.cjs")
-							or has_config_file(".eslintrc.json")
-					end,
-				}),
-				null_ls.builtins.code_actions.eslint_d.with({
-					condition = function()
-						return has_config_file(".eslintrc.js")
-							or has_config_file(".eslintrc.cjs")
-							or has_config_file(".eslintrc.json")
-					end,
-				}),
 				null_ls.builtins.formatting.prettier.with({
 					command = "prettierd",
 					condition = function()
