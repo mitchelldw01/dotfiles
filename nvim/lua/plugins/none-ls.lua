@@ -25,7 +25,6 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.formatting.rustfmt,
 				null_ls.builtins.diagnostics.golangci_lint,
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.formatting.goimports,
@@ -37,8 +36,6 @@ return {
 							or has_config_file("prettier.config.js")
 					end,
 				}),
-				null_ls.builtins.diagnostics.pylint,
-				null_ls.builtins.formatting.black,
 			},
 			on_attach = function(client, bufnr)
 				if client.supports_method("textDocument/formatting") then
