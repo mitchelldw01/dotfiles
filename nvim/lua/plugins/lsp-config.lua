@@ -40,6 +40,11 @@ return {
 
 			lspconfig.gopls.setup({
 				capabilites = capabilities,
+				settings = {
+					gopls = {
+						gofumpt = true,
+					},
+				},
 			})
 
 			lspconfig.bashls.setup({
