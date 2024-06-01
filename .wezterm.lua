@@ -65,7 +65,8 @@ config.color_schemes = {
 config.color_scheme = "custom-rose-pine"
 
 config.colors = {
-	split = "#9693AC",
+	selection_bg = "#403d52",
+	split = "#9693ac",
 }
 
 return config
