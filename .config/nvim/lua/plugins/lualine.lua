@@ -1,6 +1,23 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
+		local type_name_map = {
+			json = "JSON",
+			yaml = "YAML",
+			xml = "XML",
+			html = "HTML",
+			css = "CSS",
+			javascript = "JavaScript",
+			typescript = "TypeScript",
+		}
+
+		local function format_filetype(str)
+			if type_name_map[str] then
+				return type_name_map[str]
+			end
+			return str:sub(1, 1):upper() .. str:sub(2)
+		end
+
 		local function get_lsp_status()
 			local bufnr = vim.api.nvim_get_current_buf()
 			local clients = vim.lsp.buf_get_clients(bufnr)
@@ -15,16 +32,6 @@ return {
 			end
 		end
 
-		local type_name_map = {
-			json = "JSON",
-			yaml = "YAML",
-			xml = "XML",
-			html = "HTML",
-			css = "CSS",
-			javascript = "JavaScript",
-			typescript = "TypeScript",
-		}
-
 		require("lualine").setup({
 			options = {
 				theme = "rose-pine",
@@ -38,12 +45,7 @@ return {
 					{ "diagnostics" },
 					{
 						"filetype",
-						fmt = function(str)
-							if type_name_map[str] then
-								return type_name_map[str]
-							end
-							return str:sub(1, 1):upper() .. str:sub(2)
-						end,
+						fmt = format_filetype,
 					},
 				},
 				lualine_y = { { get_lsp_status } },
