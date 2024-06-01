@@ -21,7 +21,6 @@ return {
 					"docker_compose_language_service",
 					"dockerls",
 					"gopls",
-					"gofumpt",
 					"goimports",
 					"golines",
 					"jsonls",
