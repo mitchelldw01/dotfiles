@@ -22,6 +22,11 @@ return {
 					find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 					previewer = false,
 				},
+				live_grep = {
+					additional_args = function(_)
+						return { "--hidden", "--glob", "!**/.git/*" }
+					end,
+				},
 				buffers = {
 					sort_mru = true,
 					ignore_current_buffer = true,
