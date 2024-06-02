@@ -96,6 +96,13 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 				handlers = handlers,
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+					},
+				},
 			})
 
 			lspconfig.rust_analyzer.setup({
