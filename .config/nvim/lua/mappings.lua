@@ -38,8 +38,8 @@ vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
 -- lsp
 vim.api.nvim_create_user_command("R", "LspRestart", {})
 vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>lf", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover)
-vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation)
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename)
 vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action)
 
