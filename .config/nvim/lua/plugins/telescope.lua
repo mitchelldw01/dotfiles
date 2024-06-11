@@ -14,18 +14,33 @@ return {
 	},
 	config = function()
 		require("telescope").setup({
-			find_files = {
-				hidden = true,
-			},
 			pickers = {
 				find_files = {
-					find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 					previewer = false,
+					find_command = {
+						"rg",
+						"--files",
+						"--hidden",
+						"--no-ignore-vcs",
+						"--glob",
+						"!**/.git/",
+						"--glob",
+						"!**/node_modules/",
+						"--glob",
+						"!**/*_.templ.*",
+					},
 				},
 				live_grep = {
-					additional_args = function(_)
-						return { "--hidden", "--glob", "!**/.git/*" }
-					end,
+					additional_args = {
+						"--hidden",
+						"--no-ignore-vcs",
+						"--glob",
+						"!**/node_modules/",
+						"--glob",
+						"!**/.git/",
+						"--glob",
+						"!**/*_templ.*",
+					},
 				},
 				buffers = {
 					sort_mru = true,
