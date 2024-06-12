@@ -83,6 +83,11 @@ return {
 				handlers = handlers,
 			})
 
+			lspconfig.gleam.setup({
+				capabilities = capabilities,
+				handlers = handlers,
+			})
+
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 				handlers = handlers,
@@ -122,9 +127,19 @@ return {
 				handlers = handlers,
 			})
 
+			lspconfig.templ.setup({
+				capabilities = capabilities,
+				handlers = handlers,
+			})
+
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 				handlers = handlers,
+				init_options = {
+					preferences = {
+						disableSuggestions = true,
+					},
+				},
 			})
 
 			lspconfig.zls.setup({

@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "lua", "javascript", "typescript", "yaml", "json", "jsonc" },
+	pattern = { "lua", "javascript", "typescript", "yaml", "json", "jsonc", "gleam" },
 	callback = function()
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2

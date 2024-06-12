@@ -7,6 +7,7 @@ return {
 			ensure_installed = {
 				"bash",
 				"dockerfile",
+				"gleam",
 				"go",
 				"html",
 				"javascript",
@@ -17,6 +18,7 @@ return {
 				"nix",
 				"ruby",
 				"rust",
+				"templ",
 				"typescript",
 				"yaml",
 				"zig",
