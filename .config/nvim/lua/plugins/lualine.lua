@@ -34,7 +34,6 @@ return {
 
 		require("lualine").setup({
 			options = {
-				theme = "rose-pine",
 				component_separators = { "", "" },
 			},
 			sections = {

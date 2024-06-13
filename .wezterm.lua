@@ -20,34 +20,12 @@ config.font_size = 17.0
 
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-	left = 12,
-	right = 12,
-	top = 12,
+	left = 8,
+	right = 8,
+	top = 8,
 	bottom = 0,
 }
 
-local rose_pine = wezterm.color.get_builtin_schemes()["rose-pine"]
-
-for i, color in ipairs(rose_pine.ansi) do
-	if color == "#31748f" then
-		rose_pine.ansi[i] = "#3d90b2"
-	end
-end
-
-for i, color in ipairs(rose_pine.brights) do
-	if color == "#31748f" then
-		rose_pine.brights[i] = "#3d90b2"
-	end
-end
-
-config.color_schemes = {
-	["custom-rose-pine"] = rose_pine,
-}
-
-config.color_scheme = "custom-rose-pine"
-
-config.colors = {
-	selection_bg = "#403d52",
-}
+config.color_scheme = "tokyonight_night"
 
 return config

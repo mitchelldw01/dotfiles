@@ -60,8 +60,7 @@ vim.keymap.set("n", "<leader>gp", ":Git push<cr>")
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>")
 
 ---- trouble
-vim.keymap.set("n", "<leader>dd", ":Trouble document_diagnostics<cr>")
-vim.keymap.set("n", "<leader>dw", ":Trouble workspace_diagnostics<cr>")
+vim.keymap.set("n", "<leader>dd", ":Trouble diagnostics toggle<cr>")
 
 -- neotest
 vim.keymap.set("n", "<leader>tt", ":lua require('neotest').run.run()<CR>")

@@ -57,6 +57,7 @@ keybinds {
         bind "Alt f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "Alt u" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "Alt i" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+        bind "Alt p" { TogglePaneFrames; SwitchToMode "Normal"; }
 
         bind "Alt t" { NewTab; SwitchToMode "Normal"; }
         bind "Alt w" { CloseTab; SwitchToMode "Normal"; }
@@ -105,20 +106,20 @@ ui {
 }
 
 themes {
-	rose-pine {
-		bg "#403d52"
-		fg "#e0def4"
-		red "#eb6f92"
-		green "#3d90b2"
-		blue "#9ccfd8"
-		yellow "#f6c177"
-		magenta "#c4a7e7"
-		orange "#fe640b"
-		cyan "#ebbcba"
-		black "#26233a"
-		white "#e0def4"
+	cutom-tokyonight {
+		bg "#1a1b26"
+		fg "#c0caf5"
+		red "#f7768e"
+		green "#9ece6a"
+		blue "#2ac3de"
+		yellow "#e0af68"
+		magenta "#bb9af7"
+		orange "#ff9e64"
+		cyan "#7dcfff"
+		black "#414868"
+		white "#edeff2"
 	}
 }
 
-theme "rose-pine"
-pane_frames false
+theme "cutom-tokyonight"
+// pane_frames false
