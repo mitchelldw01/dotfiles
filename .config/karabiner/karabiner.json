@@ -39,7 +39,7 @@
             ]
           },
           {
-            "description": "Swamp left_command and left_option only in WezTerm",
+            "description": "Swap left_command and left_option only in WezTerm",
             "manipulators": [
               {
                 "type": "basic",
