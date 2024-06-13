@@ -45,6 +45,7 @@ alias vim=nvim
 alias zb="zig build"
 alias zbr="zig build run"
 alias zbt="zig build test --summary all"
+alias zka="zellij kill-all-sessions"
 
 eval "$(rbenv init - zsh)"
 eval "$(zoxide init zsh)"
