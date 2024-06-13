@@ -48,4 +48,4 @@ alias zbt="zig build test --summary all"
 
 eval "$(rbenv init - zsh)"
 eval "$(zoxide init zsh)"
-eval "$(zellij setup --generate-auto-start zsh)"
+eval "$(zellij setup --generate-auto-start zsh)" && zellij action rename-pane "zsh"
