@@ -1,0 +1,19 @@
+layout {
+    swap_tiled_layout {
+        tab split_direction="vertical" {
+            pane size="60%"
+            pane stacked=true size="40%" {
+                pane
+                pane
+            }
+        }
+    }
+    swap_tiled_layout {
+        tab {
+            pane stacked=true {
+                pane
+                pane
+            }
+        }
+    }
+}

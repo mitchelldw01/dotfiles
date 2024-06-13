@@ -34,16 +34,18 @@ export PATH=$PATH:$GOPATH/bin
 
 . "$HOME/.cargo/env"
 
-eval "$(rbenv init - zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(zoxide init zsh)"
-
-alias vim=nvim
 alias cd="z"
 alias ct="cargo test"
 alias gt="go test -v ./..."
+alias m="vim ~/dotfiles/.config/zellij/config.kdl"
+alias vim=nvim
 alias zb="zig build"
 alias zbr="zig build run"
 alias zbt="zig build test --summary all"
+
+eval "$(rbenv init - zsh)"
+eval "$(zoxide init zsh)"
+eval "$(zellij setup --generate-auto-start zsh)"

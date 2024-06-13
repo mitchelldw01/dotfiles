@@ -18,6 +18,70 @@
         },
         "rules": [
           {
+            "description": "Map right_option to left_control",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Swamp left_command and left_option only in WezTerm",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_command"
+                },
+                "to": [
+                  {
+                    "key_code": "left_option"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.github\\.wez\\.wezterm$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_option"
+                },
+                "to": [
+                  {
+                    "key_code": "left_command"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.github\\.wez\\.wezterm$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Layer 1: right_command",
             "manipulators": [
               {
