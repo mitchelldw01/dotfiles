@@ -4,8 +4,8 @@ return {
 		local bg_highlight = "#222637"
 		local comment = "#6571A2"
 		local line_nr = "#515C86"
-		local ibl_indent = "#313751"
-		local ibl_scope = "#4B5580"
+		local ibl_indent = "#272C41"
+		local ibl_scope = "#424B71"
 
 		require("tokyonight").setup({
 			style = "night",
@@ -26,6 +26,7 @@ return {
 				hl.IblIndent = { fg = ibl_indent }
 				hl.IblScope = { fg = ibl_scope }
 				hl.NeoTreeWinSeparator = { fg = c.bg }
+				hl.WinSeparator = { fg = ibl_scope }
 			end,
 		})
 

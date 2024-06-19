@@ -2,30 +2,53 @@ local wezterm = require("wezterm")
 local action = wezterm.action
 local config = {}
 
-config.keys = {
-	{ key = "y", mods = "OPT", action = action.ActivateCopyMode },
-	{ key = "f", mods = "OPT|CTRL", action = action.ToggleFullScreen },
-	{
-		key = "c",
-		mods = "OPT",
-		action = wezterm.action.SendString("zellij action clear\n"),
-	},
-}
-
 config.native_macos_fullscreen_mode = true
 config.enable_tab_bar = false
 
 config.font = wezterm.font("SF Mono", { weight = "DemiBold" })
 config.font_size = 17.0
+config.line_height = 1.2
 
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-	left = 8,
-	right = 8,
-	top = 8,
+	left = 6,
+	right = 6,
+	top = 6,
 	bottom = 0,
 }
 
+config.inactive_pane_hsb = {
+	saturation = 1.0,
+	brightness = 1.0,
+}
+
+config.keys = {
+	{ key = "f", mods = "CMD|CTRL", action = action.ToggleFullScreen },
+	{ key = "d", mods = "CMD", action = action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "d", mods = "CMD|SHIFT", action = action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "w", mods = "CMD|SHIFT", action = action.CloseCurrentPane({ confirm = false }) },
+	{ key = "h", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Left") },
+	{ key = "l", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Right") },
+	{ key = "k", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Up") },
+	{ key = "j", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Down") },
+	{ key = "t", mods = "CMD|SHIFT", action = action.ShowTabNavigator },
+	{ key = "p", mods = "CMD|SHIFT", action = action.TogglePaneZoomState },
+	{ key = "LeftArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(-1) },
+	{ key = "RightArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(1) },
+	{
+		key = "k",
+		mods = "CMD",
+		action = action.Multiple({
+			action.ClearScrollback("ScrollbackAndViewport"),
+			action.SendKey({ key = "L", mods = "CTRL" }),
+		}),
+	},
+}
+
 config.color_scheme = "tokyonight_night"
+
+config.colors = {
+	split = "#3b4261",
+}
 
 return config
