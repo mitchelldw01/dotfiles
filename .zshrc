@@ -36,9 +36,12 @@ export PATH=$PATH:$GOPATH/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+[ -z "$TMUX" ] && (tmux attach-session -t default || tmux new-session -s default)
+
 alias cd="z"
 alias ct="cargo test"
 alias gt="go test -v ./..."
+alias mux="[ -z '$TMUX' ] && tmux || TMUX= tmux"
 alias vim=nvim
 alias zb="zig build"
 alias zbr="zig build run"

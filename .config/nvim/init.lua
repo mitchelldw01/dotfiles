@@ -4,6 +4,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.wrap = false
 vim.o.scrolloff = 5
+vim.o.cmdheight = 0
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true

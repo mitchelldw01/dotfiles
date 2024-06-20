@@ -32,7 +32,7 @@ return {
 			end
 		end
 
-		local bg = "#121219"
+		local bg = "#16161e"
 		local theme = require("lualine.themes.tokyonight")
 
 		theme.command.a.fg = theme.command.a.bg
