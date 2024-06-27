@@ -1,35 +1,19 @@
 return {
-	"tokyonight.nvim",
+	"rose-pine/neovim",
 	config = function()
-		local bg_highlight = "#222637"
-		local comment = "#6571A2"
-		local line_nr = "#515C86"
-		local ibl_indent = "#272C41"
-		local ibl_scope = "#424B71"
-
-		require("tokyonight").setup({
-			style = "night",
+		require("rose-pine").setup({
 			styles = {
-				comments = { italic = false },
-				keywords = { italic = false },
-				sidebars = "normal",
-				floats = "normal",
+				bold = false,
+				italic = false,
 			},
-			on_colors = function(colors)
-				colors.comment = comment
-				colors.bg_highlight = bg_highlight
-			end,
-			on_highlights = function(hl, c)
-				hl.CursorLineNr = { fg = c.fg, bold = false }
-				hl.LineNrAbove = { fg = line_nr }
-				hl.LineNrBelow = { fg = line_nr }
-				hl.IblIndent = { fg = ibl_indent }
-				hl.IblScope = { fg = ibl_scope }
-				hl.NeoTreeWinSeparator = { fg = c.bg }
-				hl.WinSeparator = { fg = ibl_scope }
+			before_highlight = function(_, highlight, palette)
+				if highlight.fg == palette.pine then
+					highlight.fg = "#3d90b2"
+				end
 			end,
 		})
 
-		vim.cmd.colorscheme("tokyonight-night")
+		vim.cmd.colorscheme("rose-pine")
+		vim.api.nvim_set_hl(0, "IblScope", { fg = "#403d52" })
 	end,
 }

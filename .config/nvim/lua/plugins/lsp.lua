@@ -60,6 +60,7 @@ return {
 					prefix = "■ ",
 				},
 				float = { border = border },
+				signs = false,
 			})
 
 			lspconfig.bashls.setup({

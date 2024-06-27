@@ -2,17 +2,10 @@
 vim.keymap.set("v", "<", "<gv", { noremap = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true })
 
--- window navigation
-vim.keymap.set("n", "<leader>jh", "<C-w>h")
-vim.keymap.set("n", "<leader>jl", "<C-w>l")
-vim.keymap.set("n", "<leader>jk", "<C-w>k")
-vim.keymap.set("n", "<leader>jj", "<C-w>j")
-vim.keymap.set("n", "<leader>b", "<C-6>")
-
 -- buffers
 vim.keymap.set("n", "<leader>w", ":bd<CR>")
-vim.keymap.set("n", "<leader>sh", ":split<CR>")
-vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>s", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>b", "<C-6>")
 
 -- file navigation
 vim.keymap.set({ "n", "v" }, "J", "<C-d>zz", { noremap = true })
@@ -39,15 +32,16 @@ vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
 vim.api.nvim_create_user_command("R", "LspRestart", {})
 vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition)
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.references)
-vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename)
 vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action)
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
 
 -- telescope
 local telescope = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", telescope.find_files)
 vim.keymap.set("n", "<leader>fg", telescope.live_grep)
 vim.keymap.set("n", "<leader>fb", telescope.buffers)
+vim.keymap.set("n", "<leader>fr", telescope.lsp_references)
 
 -- neo-tree
 vim.keymap.set("n", "<leader>n", ":Neotree toggle<CR>")
