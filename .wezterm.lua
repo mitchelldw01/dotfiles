@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 
 config.font = wezterm.font("SFMono Nerd Font", { weight = "DemiBold" })
 config.font_size = 17.0
+config.line_height = 1.1
 config.enable_tab_bar = false
 
 config.window_padding = {
@@ -41,7 +42,7 @@ config.keys = {
 	},
 }
 
-local rose_pine = wezterm.color.get_builtin_schemes()["rose-pine"]
+local rose_pine = wezterm.color.get_builtin_schemes()["Rosé Pine (Gogh)"]
 
 for i, color in ipairs(rose_pine.ansi) do
 	if color == "#31748f" then
