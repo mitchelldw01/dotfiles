@@ -33,8 +33,8 @@ vim.api.nvim_create_user_command("R", "LspRestart", {})
 vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition)
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
 vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action)
-vim.keymap.set("n", "K", vim.lsp.buf.hover)
 
 -- telescope
 local telescope = require("telescope.builtin")
