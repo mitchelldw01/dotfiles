@@ -27,7 +27,7 @@ return {
 						"--glob",
 						"!**/node_modules/",
 						"--glob",
-						"!**/*_.templ.*",
+						"!**/*_templ.*",
 					},
 				},
 				live_grep = {
