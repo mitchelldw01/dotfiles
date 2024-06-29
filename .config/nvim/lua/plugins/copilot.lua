@@ -12,8 +12,14 @@ return {
 		config = function()
 			require("CopilotChat").setup({
 				show_help = false,
+				question_header = " User ",
+				answer_header = " Robot Man ",
+				error_header = " Error ",
 				window = {
 					layout = "float",
+					width = 0.7,
+					height = 0.7,
+					border = "rounded",
 				},
 			})
 		end,
