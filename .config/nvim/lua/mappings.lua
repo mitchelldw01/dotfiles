@@ -25,9 +25,6 @@ end, {})
 
 vim.keymap.set("n", "<leader>r", ":ToggleNumbers<CR>")
 
--- diagnostics
-vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
-
 -- lsp
 vim.api.nvim_create_user_command("R", "LspRestart", {})
 vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition)
@@ -68,3 +65,16 @@ vim.api.nvim_set_keymap("n", "<leader>cr", ":CopilotChatReset<CR>", {})
 
 -- flash
 vim.keymap.set("n", "s", require("flash").jump)
+
+-- harpoon
+local harpoon_mark = require("harpoon.mark")
+local harpoon_ui = require("harpoon.ui")
+
+vim.keymap.set("n", "<leader>aa", harpoon_mark.add_file)
+vim.keymap.set("n", "<leader>ao", harpoon_ui.toggle_quick_menu)
+
+for i = 1, 9 do
+	vim.keymap.set("n", "<leader>" .. i, function()
+		harpoon_ui.nav_file(i)
+	end)
+end
