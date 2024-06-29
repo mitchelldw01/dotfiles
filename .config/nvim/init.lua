@@ -3,13 +3,14 @@ vim.opt.clipboard = "unnamedplus"
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.wrap = false
-vim.o.scrolloff = 5
+vim.o.scrolloff = 8
 vim.o.cmdheight = 0
 vim.o.signcolumn = "yes"
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.cursorline = true
+vim.opt.foldcolumn = "1"
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
