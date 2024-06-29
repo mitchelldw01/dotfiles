@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
-local action = wezterm.action
 local config = wezterm.config_builder()
+local action = wezterm.action
 
 config.font = wezterm.font("SFMono Nerd Font", { weight = "DemiBold" })
 config.font_size = 17.0
@@ -42,28 +42,7 @@ config.keys = {
 	},
 }
 
-local rose_pine = wezterm.color.get_builtin_schemes()["Rosé Pine (Gogh)"]
-
-for i, color in ipairs(rose_pine.ansi) do
-	if color == "#31748f" then
-		rose_pine.ansi[i] = "#3d90b2"
-	end
-end
-
-for i, color in ipairs(rose_pine.brights) do
-	if color == "#31748f" then
-		rose_pine.brights[i] = "#3d90b2"
-	end
-end
-
-config.color_schemes = {
-	["custom-rose-pine"] = rose_pine,
-}
-
-config.color_scheme = "custom-rose-pine"
-config.colors = {
-	selection_bg = "#403d52",
-	split = "#6e6a86",
-}
+config.color_scheme = "Night Owl (Gogh)"
+config.colors = { split = "#575B76" }
 
 return config

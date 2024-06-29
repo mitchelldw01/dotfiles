@@ -15,7 +15,7 @@ return {
 			end
 		end
 
-		local theme = require("lualine.themes.rose-pine")
+		local theme = require("lualine.themes.night-owl")
 		local bg = theme.normal.c.bg
 
 		theme.normal.a.fg = theme.normal.a.bg

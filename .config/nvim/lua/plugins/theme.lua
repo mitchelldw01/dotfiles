@@ -1,19 +1,14 @@
 return {
-	"rose-pine/neovim",
+	"oxfist/night-owl.nvim",
 	config = function()
-		require("rose-pine").setup({
-			styles = {
-				bold = false,
-				italic = false,
-			},
-			before_highlight = function(_, highlight, palette)
-				if highlight.fg == palette.pine then
-					highlight.fg = "#3d90b2"
-				end
-			end,
+		require("night-owl").setup({
+			bold = false,
+			italics = false,
+			underline = false,
+			undercurl = false,
 		})
 
-		vim.cmd.colorscheme("rose-pine")
-		vim.api.nvim_set_hl(0, "IblScope", { fg = "#403d52" })
+		vim.cmd.colorscheme("night-owl")
+		vim.api.nvim_set_hl(0, "IblIndent", { fg = "#162943" })
 	end,
 }
