@@ -46,15 +46,4 @@ return {
 			})
 		end,
 	},
-	{
-		"mfussenegger/nvim-lint",
-		config = function()
-			require("lint").linters_by_ft = {
-				go = { "golangcilint" },
-				javascript = { "biomejs" },
-				typescript = { "biomejs" },
-				ruby = { { "rubocop" } },
-			}
-		end,
-	},
 }
