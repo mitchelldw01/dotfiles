@@ -17,6 +17,7 @@ return {
 				"make",
 				"markdown",
 				"nix",
+				"sql",
 				"ruby",
 				"rust",
 				"scala",
