@@ -14,6 +14,9 @@ vim.keymap.set({ "n", "v" }, "K", "<C-u>zz", { noremap = true })
 -- black hole paste
 vim.keymap.set("v", "<leader>p", '"_dP')
 
+-- highlight
+vim.keymap.set("n", "<leader>/", ":noh<CR>")
+
 -- line numbers
 vim.api.nvim_create_user_command("ToggleNumbers", function()
 	if vim.wo.relativenumber then
@@ -24,6 +27,9 @@ vim.api.nvim_create_user_command("ToggleNumbers", function()
 end, {})
 
 vim.keymap.set("n", "<leader>r", ":ToggleNumbers<CR>")
+
+-- diagnostics
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 
 -- lsp
 vim.api.nvim_create_user_command("R", "LspRestart", {})
