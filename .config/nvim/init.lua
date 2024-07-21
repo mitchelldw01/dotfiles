@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.zig_fmt_autosave = false
 vim.opt.clipboard = "unnamedplus"
 vim.wo.number = true
 vim.wo.relativenumber = true
