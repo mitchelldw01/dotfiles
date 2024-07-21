@@ -18,6 +18,8 @@ return {
 				ensure_installed = {
 					"bashls",
 					"biome",
+					"clangd",
+					"clang-format",
 					"docker_compose_language_service",
 					"dockerls",
 					"gopls",
@@ -30,6 +32,7 @@ return {
 					"solargraph",
 					"stylua",
 					"tsserver",
+					"zls",
 				},
 			})
 		end,
@@ -60,6 +63,11 @@ return {
 			})
 
 			lspconfig.biome.setup({
+				capabilities = capabilities,
+				handlers = handlers,
+			})
+
+			lspconfig.clangd.setup({
 				capabilities = capabilities,
 				handlers = handlers,
 			})
@@ -134,7 +142,6 @@ return {
 			})
 
 			lspconfig.zls.setup({
-				cmd = { "zls" },
 				capabilities = capabilities,
 				handlers = handlers,
 			})

@@ -5,14 +5,15 @@ return {
 		config = function()
 			require("conform").setup({
 				formatters_by_ft = {
-					lua = { "stylua" },
+					c = { "clang-format" },
 					go = { "goimports", "golines" },
 					javascript = { "biome", "prettierd" },
-					typescript = { "biome", "prettierd" },
-					jsonc = { "biome", "prettierd" },
 					json = { "biome", "prettierd" },
-					yaml = { "prettierd" },
+					jsonc = { "biome", "prettierd" },
+					lua = { "stylua" },
 					ruby = { "rubocop" },
+					typescript = { "biome", "prettierd" },
+					yaml = { "prettierd" },
 				},
 				format_after_save = {
 					async = true,
