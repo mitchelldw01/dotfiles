@@ -15,7 +15,7 @@ return {
 			end
 		end
 
-		local theme = require("lualine.themes.night-owl")
+		local theme = require("lualine.themes.kanagawa")
 		local bg = theme.normal.c.bg
 
 		theme.normal.a.fg = theme.normal.a.bg
@@ -36,7 +36,7 @@ return {
 				globalstatus = true,
 			},
 			sections = {
-				lualine_a = { { "mode" } },
+				lualine_a = { { "mode", color = { gui = "bold" } } },
 				lualine_b = {},
 				lualine_c = {
 					{ "branch" },

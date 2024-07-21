@@ -6,6 +6,7 @@ config.font = wezterm.font("SFMono Nerd Font", { weight = "DemiBold" })
 config.font_size = 17.0
 config.line_height = 1.1
 config.enable_tab_bar = false
+config.native_macos_fullscreen_mode = true
 
 config.window_padding = {
 	left = 8,
@@ -32,6 +33,9 @@ config.keys = {
 	{ key = "p", mods = "CMD|SHIFT", action = action.TogglePaneZoomState },
 	{ key = "LeftArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(-1) },
 	{ key = "RightArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(1) },
+	{ key = "y", mods = "CMD", action = action.ActivateCopyMode },
+	{ key = "u", mods = "CMD", action = action.SwitchToWorkspace({ name = "default" }) },
+	{ key = "i", mods = "CMD", action = action.SwitchToWorkspace({ name = "background" }) },
 	{
 		key = "k",
 		mods = "CMD",
@@ -42,7 +46,7 @@ config.keys = {
 	},
 }
 
-config.color_scheme = "Night Owl (Gogh)"
-config.colors = { split = "#575B76" }
+config.color_scheme = "Kanagawa (Gogh)"
+config.colors = { split = "#4e5e74" }
 
 return config
