@@ -5,16 +5,18 @@ return {
 		"nvim-lua/plenary.nvim",
 		"antoinemadec/FixCursorHold.nvim",
 		"nvim-treesitter/nvim-treesitter",
-		"marilari88/neotest-vitest",
-		"rouge8/neotest-rust",
 		"nvim-neotest/neotest-go",
+		"rouge8/neotest-rust",
+		"marilari88/neotest-vitest",
+		"lawrence-laz/neotest-zig",
 	},
 	config = function()
 		require("neotest").setup({
 			adapters = {
-				require("neotest-vitest"),
-				require("neotest-rust"),
 				require("neotest-go"),
+				require("neotest-rust"),
+				require("neotest-vitest"),
+				require("neotest-zig"),
 			},
 		})
 	end,
