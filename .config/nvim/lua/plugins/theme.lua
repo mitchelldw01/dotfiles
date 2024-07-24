@@ -9,8 +9,9 @@ return {
 				local sumiInk7 = "#7d7d9b"
 
 				return {
+					Boolean = { bold = false },
 					LineNr = { bg = colors.palette.sumiInk3, fg = sumiInk7 },
-					CursorLineNr = { bg = colors.palette.sumiInk3 },
+					CursorLineNr = { bg = colors.palette.sumiInk3, bold = false },
 					SignColumn = { bg = colors.palette.sumiInk3 },
 					FoldColumn = { bg = colors.palette.sumiInk3 },
 					NormalFloat = { bg = colors.palette.sumiInk3 },
@@ -22,5 +23,7 @@ return {
 		})
 
 		vim.cmd("colorscheme kanagawa")
+		vim.api.nvim_set_hl(0, "@lsp.typemod.function.readonly", { link = "Function" })
+		vim.api.nvim_set_hl(0, "@string.escape", { link = "String" })
 	end,
 }

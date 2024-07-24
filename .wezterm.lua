@@ -47,6 +47,6 @@ config.keys = {
 }
 
 config.color_scheme = "Kanagawa (Gogh)"
-config.colors = { split = "#4e5e74" }
+config.colors = { split = "#54546d" }
 
 return config
