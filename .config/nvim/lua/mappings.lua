@@ -84,3 +84,7 @@ for i = 1, 9 do
 		harpoon_ui.nav_file(i)
 	end)
 end
+
+-- neogen
+vim.api.nvim_set_keymap("n", "<Leader>md", ":lua require('neogen').generate()<CR>", {})
+vim.api.nvim_set_keymap("n", "<Leader>mf", ":lua require('neogen').generate({ type = 'func' })<CR>", {})
