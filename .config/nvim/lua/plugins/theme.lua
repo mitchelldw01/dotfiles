@@ -25,5 +25,7 @@ return {
 		vim.cmd("colorscheme kanagawa")
 		vim.api.nvim_set_hl(0, "@lsp.typemod.function.readonly", { link = "Function" })
 		vim.api.nvim_set_hl(0, "@string.escape", { link = "String" })
+		vim.api.nvim_set_hl(0, "@keyword.operator", { bold = false })
+		vim.api.nvim_set_hl(0, "@variable.builtin", { italic = false })
 	end,
 }
