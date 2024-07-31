@@ -4,7 +4,7 @@ vim.keymap.set("v", ">", ">gv", { noremap = true })
 
 -- buffers
 vim.keymap.set("n", "<leader>w", ":bd<CR>")
-vim.keymap.set("n", "<leader>s", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>s", ":vsplit<CR><C-w>w")
 vim.keymap.set("n", "<leader>b", "<C-6>")
 
 -- file navigation
