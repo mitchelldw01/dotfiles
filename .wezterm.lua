@@ -5,7 +5,7 @@ local action = wezterm.action
 config.font = wezterm.font("SFMono Nerd Font", { weight = "DemiBold" })
 config.font_size = 17.0
 config.line_height = 1.1
-config.enable_tab_bar = false
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.native_macos_fullscreen_mode = true
 
 config.window_padding = {
