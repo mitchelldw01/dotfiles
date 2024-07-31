@@ -58,5 +58,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		if #vim.fn.argv() == 0 then
 			require("telescope.builtin").find_files()
 		end
+
+		vim.cmd("RenderMarkdown disable")
 	end,
 })
