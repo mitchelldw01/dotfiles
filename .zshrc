@@ -36,6 +36,8 @@ export PATH=$PATH:$GOPATH/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+source ~/secrets.sh
+
 alias cd="z"
 alias ct="cargo test"
 alias gt="go test -v ./..."
