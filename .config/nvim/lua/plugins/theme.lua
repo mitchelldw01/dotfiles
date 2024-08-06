@@ -10,6 +10,7 @@ return {
 
 				return {
 					Boolean = { bold = false },
+					ModeMsg = { bold = false },
 					LineNr = { bg = colors.palette.sumiInk3, fg = sumiInk7 },
 					CursorLineNr = { bg = colors.palette.sumiInk3, bold = false },
 					SignColumn = { bg = colors.palette.sumiInk3 },
