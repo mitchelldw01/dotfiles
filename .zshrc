@@ -32,6 +32,9 @@ esac
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+ln -sn $(brew --prefix)/opt/llvm/bin/lldb-dap $(brew --prefix)/bin/ 2>/dev/null
+ln -sn $(brew --prefix)/opt/llvm/bin/clang-tidy $(brew --prefix)/bin/ 2>/dev/null
+
 . "$HOME/.cargo/env"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
