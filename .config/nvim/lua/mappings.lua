@@ -50,18 +50,19 @@ vim.keymap.set("n", "<leader>fr", telescope.lsp_references)
 vim.keymap.set("n", "<leader>n", ":Neotree toggle<CR>")
 
 -- fugitive
-vim.keymap.set("n", "<leader>gg", ":tab Git<cr>")
-vim.keymap.set("n", "<leader>gp", ":Git push<cr>")
+vim.keymap.set("n", "<leader>gg", ":tab Git<CR>")
+vim.keymap.set("n", "<leader>gp", ":Git push<CR>")
 
 -- markdown-preview
-vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>")
+vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<CR>")
 
 ---- trouble
-vim.keymap.set("n", "<leader>dd", ":Trouble diagnostics toggle<cr>")
+vim.keymap.set("n", "<leader>dd", ":Trouble diagnostics toggle focus=true<CR>")
 
 -- neotest
-vim.keymap.set("n", "<leader>tt", ":lua require('neotest').run.run()<CR>")
-vim.keymap.set("n", "<leader>to", ":lua require('neotest').output.open()<CR>")
+local neotest = require("neotest")
+vim.keymap.set("n", "<leader>tt", neotest.run.run)
+vim.keymap.set("n", "<leader>to", neotest.output.open)
 
 -- copilot
 vim.api.nvim_set_keymap("n", "<leader>cd", ":Copilot disable<CR>", {})
@@ -86,5 +87,19 @@ for i = 1, 9 do
 end
 
 -- neogen
-vim.api.nvim_set_keymap("n", "<Leader>md", ":lua require('neogen').generate()<CR>", {})
-vim.api.nvim_set_keymap("n", "<Leader>mf", ":lua require('neogen').generate({ type = 'func' })<CR>", {})
+local neogen = require("neogen")
+
+vim.keymap.set("n", "<Leader>mc", neogen.generate)
+vim.keymap.set("n", "<Leader>mf", function()
+	neogen.generate({ type = "func" })
+end)
+
+-- nvim-dap
+local dap = require("dap")
+
+vim.keymap.set("n", "<leader>dc", dap.continue)
+vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint)
+vim.keymap.set("n", "<leader>do", dap.step_over)
+vim.keymap.set("n", "<leader>di", dap.step_into)
+vim.keymap.set("n", "<leader>du", dap.step_out)
+vim.keymap.set("n", "<leader>dq", dap.terminate)
