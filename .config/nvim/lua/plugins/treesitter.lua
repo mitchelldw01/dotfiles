@@ -26,6 +26,7 @@ return {
 				"typescript",
 				"yaml",
 				"zig",
+				"elixir",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },
