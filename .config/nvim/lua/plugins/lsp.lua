@@ -27,6 +27,7 @@ return {
 					"golines",
 					"jsonls",
 					"lua_ls",
+					"mesonlsp",
 					"prettierd",
 					"rust_analyzer",
 					"solargraph",
@@ -107,6 +108,11 @@ return {
 						},
 					},
 				},
+			})
+
+			lspconfig.mesonlsp.setup({
+				capabilities = capabilities,
+				handlers = handlers,
 			})
 
 			lspconfig.rust_analyzer.setup({
