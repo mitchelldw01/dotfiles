@@ -12,26 +12,6 @@ return {
 		dapui.setup()
 		require("nvim-dap-virtual-text").setup()
 
-		dap.adapters.lldb = {
-			type = "executable",
-			command = "/opt/homebrew/bin/lldb-dap",
-			name = "lldb",
-		}
-
-		dap.configurations.c = {
-			{
-				name = "Launch",
-				type = "lldb",
-				request = "launch",
-				program = function()
-					return vim.fn.input("Executable: ", vim.fn.getcwd() .. "/", "file")
-				end,
-				cwd = "${workspaceFolder}",
-				stopOnEntry = false,
-				args = {},
-			},
-		}
-
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
 		end
@@ -44,5 +24,48 @@ return {
 		dap.listeners.before.event_exited.dapui_config = function()
 			dapui.close()
 		end
+
+		dap.adapters = {
+			lldb = {
+				type = "executable",
+				command = "/usr/bin/lldb-vscode",
+				name = "lldb",
+			},
+			["pwa-node"] = {
+				type = "server",
+				host = "localhost",
+				port = "${port}",
+				executable = {
+					command = "node",
+					args = { "/Users/mitchell/bin/js-debug/src/dapDebugServer.js", "${port}" },
+				},
+			},
+		}
+
+		dap.configurations = {
+			c = {
+				name = "Launch",
+				type = "lldb",
+				request = "launch",
+				cwd = "${workspaceFolder}",
+				stopOnEntry = false,
+				program = function()
+					return vim.fn.input("Executable: ", vim.fn.getcwd() .. "/", "file")
+				end,
+				args = function()
+					local input = vim.fn.input("Arguments: ")
+					return vim.split(input, " ", { trimempty = true })
+				end,
+			},
+			javascript = {
+				{
+					type = "pwa-node",
+					request = "launch",
+					name = "Launch file",
+					program = "${file}",
+					cwd = "${workspaceFolder}",
+				},
+			},
+		}
 	end,
 }
