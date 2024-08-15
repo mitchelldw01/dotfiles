@@ -7,6 +7,7 @@ config.font_size = 17.0
 config.line_height = 1.1
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.native_macos_fullscreen_mode = true
+config.show_new_tab_button_in_tab_bar = false
 
 config.window_padding = {
 	left = 8,
@@ -29,7 +30,6 @@ config.keys = {
 	{ key = "l", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Right") },
 	{ key = "k", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Up") },
 	{ key = "j", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Down") },
-	{ key = "t", mods = "CMD|SHIFT", action = action.ShowTabNavigator },
 	{ key = "p", mods = "CMD|SHIFT", action = action.TogglePaneZoomState },
 	{ key = "LeftArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(-1) },
 	{ key = "RightArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(1) },
