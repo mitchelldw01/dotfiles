@@ -31,6 +31,7 @@ esac
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export GOPRIVATE="bitbucket.org/wieckmedia/*"
 
 ln -sn $(brew --prefix)/opt/llvm/bin/lldb-dap $(brew --prefix)/bin/ 2>/dev/null
 ln -sn $(brew --prefix)/opt/llvm/bin/clang-tidy $(brew --prefix)/bin/ 2>/dev/null
@@ -41,6 +42,7 @@ ln -sn $(brew --prefix)/opt/llvm/bin/clang-tidy $(brew --prefix)/bin/ 2>/dev/nul
 
 source ~/secrets.sh
 
+alias cat="bat"
 alias cd="z"
 alias ct="cargo test"
 alias gt="go test -v ./..."
