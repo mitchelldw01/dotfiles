@@ -60,7 +60,7 @@ return {
 			lspconfig.bashls.setup({
 				capabilities = capabilities,
 				handlers = handlers,
-				filetypes = { "sh", "bash", "zsh", "env" },
+				filetypes = { "sh", "bash", "ash", "zsh", "env" },
 			})
 
 			lspconfig.biome.setup({

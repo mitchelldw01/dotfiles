@@ -30,9 +30,11 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	pattern = ".env*",
-	command = "set filetype=sh",
+vim.filetype.add({
+	extension = {
+		ash = "sh",
+		env = "sh",
+	},
 })
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
