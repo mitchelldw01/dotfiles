@@ -40,8 +40,8 @@ config.keys = {
 		key = "k",
 		mods = "CMD",
 		action = action.Multiple({
-			action.ClearScrollback("ScrollbackAndViewport"),
-			action.SendKey({ key = "L", mods = "CTRL" }),
+			action.ClearScrollback("ScrollbackOnly"),
+			action.SendKey({ key = "k", mods = "CTRL" }),
 		}),
 	},
 }
