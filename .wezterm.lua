@@ -39,10 +39,16 @@ config.keys = {
 	{
 		key = "k",
 		mods = "CMD",
-		action = action.Multiple({
-			action.ClearScrollback("ScrollbackOnly"),
-			action.SendKey({ key = "k", mods = "CTRL" }),
-		}),
+		action = wezterm.action_callback(function(window, pane)
+			local result = pane:get_foreground_process_name()
+
+			if result and result:match("tmux") then
+				window:perform_action(wezterm.action.SendKey({ key = "k", mods = "CTRL" }), pane)
+			else
+				window:perform_action(wezterm.action.ClearScrollback("ScrollbackAndViewport"), pane)
+				window:perform_action(wezterm.action.SendKey({ key = "l", mods = "CTRL" }), pane)
+			end
+		end),
 	},
 }
 
