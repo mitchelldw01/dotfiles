@@ -32,7 +32,7 @@ return {
 					"rust_analyzer",
 					"solargraph",
 					"stylua",
-					"tsserver",
+					"ts_ls",
 					"zls",
 				},
 			})
@@ -137,7 +137,7 @@ return {
 				handlers = handlers,
 			})
 
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 				handlers = handlers,
 				init_options = {
