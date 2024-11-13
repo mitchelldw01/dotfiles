@@ -9,7 +9,6 @@ return {
 				local sumiInk7 = "#7d7d9b"
 
 				return {
-					-- Visual = { bg = colors.palette.sumiInk3 },
 					Boolean = { bold = false },
 					ModeMsg = { bold = false },
 					LineNr = { fg = sumiInk7, bg = colors.palette.sumiInk3 },
