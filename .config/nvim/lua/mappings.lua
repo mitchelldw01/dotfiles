@@ -70,8 +70,6 @@ vim.keymap.set("n", "<leader>to", neotest.output.open, { noremap = true, silent 
 -- copilot
 vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>cc", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>cr", ":CopilotChatReset<CR>", { noremap = true, silent = true })
 
 -- flash
 vim.keymap.set("n", "s", require("flash").jump, { noremap = true, silent = true })
@@ -107,6 +105,3 @@ vim.keymap.set("n", "<leader>do", dap.step_over, { noremap = true, silent = true
 vim.keymap.set("n", "<leader>di", dap.step_into, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>du", dap.step_out, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>dq", dap.terminate, { noremap = true, silent = true })
-
--- command line
-vim.keymap.set("n", "<leader>;", ":!", { noremap = true, silent = false })

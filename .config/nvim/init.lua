@@ -12,6 +12,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.cursorline = true
 vim.opt.foldcolumn = "1"
+vim.opt.laststatus = 3
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
