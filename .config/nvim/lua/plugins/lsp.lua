@@ -150,6 +150,7 @@ return {
 			lspconfig.zls.setup({
 				capabilities = capabilities,
 				handlers = handlers,
+				cmd = { "zls" },
 			})
 		end,
 	},
