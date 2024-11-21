@@ -30,7 +30,10 @@ return {
 				"zig",
 			},
 			highlight = { enable = true },
-			indent = { enable = true },
+			indent = {
+				enable = true,
+				disable = { "zig" },
+			},
 		})
 	end,
 }
