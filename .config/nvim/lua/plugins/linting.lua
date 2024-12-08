@@ -9,6 +9,7 @@ return {
 
 		lint.linters_by_ft = {
 			c = { "clangtidy" },
+			cpp = { "clangtidy" },
 			go = { "golangcilint" },
 			javascript = { "biomejs" },
 			typescript = { "biomejs" },

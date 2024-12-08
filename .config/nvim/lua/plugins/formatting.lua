@@ -6,6 +6,7 @@ return {
 			require("conform").setup({
 				formatters_by_ft = {
 					c = { "clang-format" },
+					cpp = { "clang-format" },
 					go = { "goimports", "golines" },
 					javascript = { "biome", "prettierd" },
 					json = { "biome", "prettierd" },
