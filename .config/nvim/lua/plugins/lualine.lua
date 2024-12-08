@@ -9,7 +9,7 @@ return {
 			end, clients)
 
 			if #filtered_clients > 0 then
-				return "LSP Conn"
+				return "LSP Conn (" .. filtered_clients[1].name .. ")"
 			else
 				return "Not Found"
 			end
