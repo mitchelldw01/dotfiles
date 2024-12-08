@@ -23,6 +23,9 @@ config.inactive_pane_hsb = {
 
 config.keys = {
 	{ key = "f", mods = "CMD|CTRL", action = action.ToggleFullScreen },
+	{ key = "y", mods = "CMD", action = action.ActivateCopyMode },
+	{ key = "LeftArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(-1) },
+	{ key = "RightArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(1) },
 	{ key = "d", mods = "CMD", action = action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "d", mods = "CMD|SHIFT", action = action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "w", mods = "CMD|SHIFT", action = action.CloseCurrentPane({ confirm = false }) },
@@ -30,12 +33,11 @@ config.keys = {
 	{ key = "l", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Right") },
 	{ key = "k", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Up") },
 	{ key = "j", mods = "CMD|SHIFT", action = action.ActivatePaneDirection("Down") },
-	{ key = "p", mods = "CMD|SHIFT", action = action.TogglePaneZoomState },
-	{ key = "LeftArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(-1) },
-	{ key = "RightArrow", mods = "CMD|SHIFT", action = action.MoveTabRelative(1) },
-	{ key = "y", mods = "CMD", action = action.ActivateCopyMode },
-	{ key = "u", mods = "CMD", action = action.SwitchToWorkspace({ name = "default" }) },
-	{ key = "i", mods = "CMD", action = action.SwitchToWorkspace({ name = "background" }) },
+	{ key = "h", mods = "CMD|CTRL", action = action.AdjustPaneSize({ "Left", 1 }) },
+	{ key = "l", mods = "CMD|CTRL", action = action.AdjustPaneSize({ "Right", 1 }) },
+	{ key = "j", mods = "CMD|CTRL", action = action.AdjustPaneSize({ "Down", 1 }) },
+	{ key = "k", mods = "CMD|CTRL", action = action.AdjustPaneSize({ "Up", 1 }) },
+	{ key = "p", mods = "CMD", action = action.TogglePaneZoomState },
 	{
 		key = "k",
 		mods = "CMD",
