@@ -16,6 +16,11 @@ return {
 			hl.LineNrBelow = { fg = c.fg_dark }
 			hl.IblScope = { fg = c.fg_gutter }
 			hl.IblIndent = { fg = "#323953" }
+			hl.NormalFloat = { bg = c.bg_dark1 }
+			hl.FloatBorder = { bg = c.bg_dark1 }
+			hl.CmpNormal = { bg = c.bg_dark1 }
+			hl.CmpDocNormal = { bg = c.bg_dark }
+			hl.CmpDocBorder = { bg = c.bg_dark }
 		end,
 	},
 	config = function(_, opts)

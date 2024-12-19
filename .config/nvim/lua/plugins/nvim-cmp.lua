@@ -20,8 +20,14 @@ return {
 				{ name = "nvim_lsp_signature_help" },
 			},
 			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
+				completion = {
+					border = "solid",
+					winhighlight = "Normal:CmpNormal",
+				},
+				documentation = {
+					border = "solid",
+					winhighlight = "Normal:CmpDocNormal,FloatBorder:CmpDocBorder",
+				},
 			},
 		})
 	end,
