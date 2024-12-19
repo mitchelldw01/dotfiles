@@ -85,8 +85,6 @@ return {
 			}))
 
 			lspconfig.zls.setup(vim.tbl_deep_extend("keep", base_config, {
-				on_attach = on_attach,
-				capabilities = capabilities,
 				cmd = { "zls" },
 			}))
 		end,
