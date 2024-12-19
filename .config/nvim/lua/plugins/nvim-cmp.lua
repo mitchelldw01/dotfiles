@@ -4,18 +4,20 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-nvim-lsp-signature-help",
 	},
 	config = function()
 		local cmp = require("cmp")
 
 		cmp.setup({
 			mapping = cmp.mapping.preset.insert({
-				["<CR>"] = cmp.mapping.confirm({ select = true }),
+				["<cr>"] = cmp.mapping.confirm({ select = true }),
 			}),
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "buffer" },
 				{ name = "path" },
+				{ name = "nvim_lsp_signature_help" },
 			},
 			window = {
 				completion = cmp.config.window.bordered(),
