@@ -61,7 +61,7 @@ return {
 			}))
 
 			lspconfig.clangd.setup(vim.tbl_deep_extend("keep", base_config, {
-				cmd = { "clangd", "--offset-encoding=utf-16" },
+				cmd = { "clangd", "--offset-encoding=utf-16", "--function-arg-placeholders=0" },
 			}))
 
 			lspconfig.lua_ls.setup(vim.tbl_deep_extend("keep", base_config, {
