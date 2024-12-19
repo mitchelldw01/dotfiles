@@ -21,6 +21,7 @@ return {
 			build = "make tiktoken",
 			keys = {
 				{ "<leader>cc", "<cmd>CopilotChatToggle<cr>" },
+				{ "<leader>cr", "<cmd>CopilotChatReset<cr>" },
 			},
 			opts = {
 				answer_header = "## Robot Man ",
