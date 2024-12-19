@@ -54,6 +54,7 @@ return {
 			lspconfig.gopls.setup(base_config)
 			lspconfig.html.setup(base_config)
 			lspconfig.jsonls.setup(base_config)
+			lspconfig.lua_ls.setup(base_config)
 			lspconfig.ts_ls.setup(base_config)
 
 			lspconfig.bashls.setup(vim.tbl_deep_extend("keep", base_config, {
@@ -62,16 +63,6 @@ return {
 
 			lspconfig.clangd.setup(vim.tbl_deep_extend("keep", base_config, {
 				cmd = { "clangd", "--offset-encoding=utf-16", "--function-arg-placeholders=0" },
-			}))
-
-			lspconfig.lua_ls.setup(vim.tbl_deep_extend("keep", base_config, {
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
-						},
-					},
-				},
 			}))
 
 			lspconfig.rust_analyzer.setup(vim.tbl_deep_extend("keep", base_config, {
