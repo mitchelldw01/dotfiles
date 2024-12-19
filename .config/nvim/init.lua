@@ -9,5 +9,6 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 vim.opt.wrap = false
+vim.opt.scrolloff = 8
 
 require("config.lazy")
