@@ -6,9 +6,9 @@ return {
 	},
 	keys = {
 		{ "<leader>at", "<cmd>NeighborOpen test<cr>" },
-		{ "<leader>aT", "<cmd>NeighborOpen test 'rightbelow vsplit'<cr>" },
+		{ "<leader>aT", "<cmd>NeighborOpen test rightbelow vsplit<cr>" },
 		{ "<leader>ah", "<cmd>NeighborOpen header<cr>" },
-		{ "<leader>aH", "<cmd>NeighborOpen header 'rightbelow vsplit'<cr>" },
+		{ "<leader>aH", "<cmd>NeighborOpen header rightbelow vsplit<cr>" },
 	},
 	opts = {
 		extensions = {
