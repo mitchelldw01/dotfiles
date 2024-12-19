@@ -10,6 +10,4 @@ vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 vim.opt.wrap = false
 
-require("autocmds")
-require("keymaps")
 require("config.lazy")
