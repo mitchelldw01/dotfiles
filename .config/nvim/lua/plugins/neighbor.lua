@@ -11,23 +11,21 @@ return {
 		{ "<leader>aH", "<cmd>NeighborOpen header 'rightbelow vsplit'<cr>" },
 	},
 	opts = {
-		remember_selections = false,
-		extenstions = {
+		extensions = {
 			ripgrep = true,
 			telescope = true,
 		},
 		contexts = {
-			{
-				name = "test",
+			test = {
 				use_first_match = true,
 				mappings = {
 					{ ".cpp", "_test.cpp" },
 					{ ".h", "_test.cpp" },
+					{ ".lua", "_spec.lua" },
 					{ ".go", "_test.go" },
 				},
 			},
-			{
-				name = "header",
+			header = {
 				mappings = {
 					{ ".cpp", ".h" },
 					{ ".h", "_test.cpp" },
