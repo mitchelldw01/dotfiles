@@ -23,6 +23,7 @@ return {
 			"yaml",
 			"zig",
 		},
+		highlight = { enable = true },
 	},
 	config = function(_, opts)
 		local configs = require("nvim-treesitter.configs")
