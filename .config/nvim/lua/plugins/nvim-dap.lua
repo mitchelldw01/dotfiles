@@ -34,7 +34,7 @@ return {
 		dap.adapters = {
 			lldb = {
 				type = "executable",
-				command = "/opt/homebrew/bin/lldb-vscode",
+				command = "/opt/homebrew/opt/llvm/bin/lldb-dap",
 				name = "lldb",
 			},
 		}
