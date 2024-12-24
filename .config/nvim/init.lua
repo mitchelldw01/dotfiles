@@ -11,4 +11,10 @@ vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
 
+vim.diagnostic.config({
+	float = {
+		border = "rounded",
+	},
+})
+
 require("config.lazy")
